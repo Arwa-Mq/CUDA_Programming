@@ -54,9 +54,11 @@ def execute(block, config):
     # Compute model prediction at current parameter values
     model_prediction = Boost_Factor_Model(R, rs, b0)
 
-    diff = model_prediction - data_vector
+    #diff = model_prediction - data_vector
+
     # Chi-squared using covariance
-    chisq = np.dot(diff, np.dot(inv_cov, diff))
+    #chisq = np.dot(diff, np.dot(inv_cov, diff))
+    chisq = np.sum(((model_prediction - data_vector) / sigma_B) ** 2)
     log_L = -0.5 * chisq
 
     # Store likelihood in datablock
