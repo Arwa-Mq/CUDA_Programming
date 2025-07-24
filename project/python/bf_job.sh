@@ -11,7 +11,9 @@
 
 
 # Load environment
-#module restore cosmosis
+module restore cosmosis
+module load PrgEnv-gnu
+module load cudatoolkit 
 
 
 # Activate your virtual environment if needed
@@ -23,6 +25,7 @@ source cosmosis_env/bin/activate
 source cosmosis-configure
 
 # (Optional) Confirm GPU is visible
+nvcc --version
 nvidia-smi
 
 # Run the pipeline
