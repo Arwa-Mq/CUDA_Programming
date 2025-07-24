@@ -41,7 +41,7 @@ def setup(options):
 def execute(block, config):
     R = config['R']
     data_vector = config['data_vector']
-    inv_cov = config['ovariance'] #config['inv_cov']
+    inv_cov = config['covariance'] #config['inv_cov']
 
     # Read parameter values from the block
     # DO: change l and z according to which data file you are using, also do that in the bf_values.ini file. 
