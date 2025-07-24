@@ -58,4 +58,7 @@ def execute(block, config):
     # Move scalar back to CPU for CosmoSIS
     block["likelihoods", "boost_factor_likelihood_like"] = log_L.get()
 
+    value = log_L.get()
+    print("Value shape/type:", type(value), getattr(value, 'shape', 'no shape'))
+
     return 0
