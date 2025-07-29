@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --gpus=1                     # Request 1 GPU
 #SBATCH --cpus-per-task=4           # Match your emcee config (10 walkers, 4 CPUs)
-#SBATCH --time=01:00:00             # Max runtime (adjust as needed)
+#SBATCH --time=00:15:00             # Max runtime (adjust as needed)
 #SBATCH --constraint=gpu
 
 

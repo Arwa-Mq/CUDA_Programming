@@ -25,7 +25,7 @@ def Boost_Factor_Model(R, rs, b0):
 def setup(options):
     R = cp.logspace(-1, 2, 100)
     B0 = 0.3
-    Rs = 0.5
+    Rs = 0.2
     data_B = Boost_Factor_Model(R, Rs, B0)
 
     variance = cp.ones(data_B.size) * 0.1**2
