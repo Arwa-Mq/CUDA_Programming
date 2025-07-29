@@ -25,7 +25,7 @@ def Boost_Factor_Model(R, rs, b0):
 def setup(options):
     R = cp.logspace(-1, 2, 100)
     B0 = 0.3
-    Rs = 0.2
+    Rs = 0.5
     data_B = Boost_Factor_Model(R, Rs, B0)
 
     variance = cp.ones(data_B.size) * 0.1**2
@@ -52,6 +52,7 @@ def execute(block, config):
     b0 = 10**logb0
 
     model_prediction = Boost_Factor_Model(R, rs, b0)
+    
     chisq = cp.sum(((model_prediction - data_vector) / sigma_B) ** 2)
     log_L = -0.5 * chisq
 
