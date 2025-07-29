@@ -1,3 +1,9 @@
+# I write this project as a part of the CUDA course application. 
+'''
+this code is considring the redshifts and richenecs bins
+I didn't test this yet...
+'''
+
 import numpy as np
 import cupy as cp
 import os

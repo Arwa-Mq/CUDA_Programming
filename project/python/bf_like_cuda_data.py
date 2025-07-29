@@ -1,4 +1,4 @@
-#to be run on a GPU
+#to be run on a GPU using a real data I have not tested this code
 
 import numpy as np
 import cupy as cp  # New: GPU array lib

@@ -1,4 +1,6 @@
-# this like can be run on GPU using CUDA.. it is using a mock data 
+# this like can be run on GPU using CUDA..
+######## it is using a mock data ######## 
+######## the code been tested and giving a good results. 
 import cupy as cp
 from cosmosis.datablock import names
 
@@ -52,7 +54,7 @@ def execute(block, config):
     b0 = 10**logb0
 
     model_prediction = Boost_Factor_Model(R, rs, b0)
-    
+
     chisq = cp.sum(((model_prediction - data_vector) / sigma_B) ** 2)
     log_L = -0.5 * chisq
 
